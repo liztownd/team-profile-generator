@@ -1,9 +1,15 @@
 //generates the html file
 
-function generateCards(){
-    employees.forEach(data => {
-        if (data.role === "Manager"){
-            return `
+function generateCards(employees){
+  const htmlTemps =[];
+
+  
+
+ employees.forEach(data => {
+      // console.log(data)
+      // console.log(data.getRole())
+        if (data.getRole() === "Manager"){
+            htmlTemps.push( `
             <div class="card text-white m-3 float-left shadow " style="width: 18rem;">
             <div class="card-header bg-primary h5">${data.name}\n
                 <i class="fas fa-mug-hot"></i>            
@@ -17,10 +23,10 @@ function generateCards(){
                 </ul>
               </div>
           </div>
-    `
+    `)
         }
-        else if (data.role === "Engineer"){
-            return `
+        else if (data.getRole() === "Engineer"){
+            htmlTemps.push( `
             <div class="card text-white m-3 float-left shadow" style="width: 18rem;">
             <div class="card-header bg-primary h5">${data.name}\n
                 <i class="fas fa-glasses"></i>
@@ -35,10 +41,10 @@ function generateCards(){
               </div>
           </div>
     
-            `
+            `)
         }
         else {
-            return `
+            htmlTemps.push( `
             <div class="card text-white m-3 float-left shadow" style="width: 18rem;">
             <div class="card-header bg-primary h5">${data.name}\n
                 <i class="fas fa-user-graduate"></i>
@@ -53,12 +59,13 @@ function generateCards(){
               </div>
           </div>
     
-            `
+            `)
         }
-    }
-)};
+    })
+    return htmlTemps.join("")
+  };
 
-function generateHtml(){
+function generateHtml(employees){
     return `
     <!DOCTYPE html>
 <html lang="en">
