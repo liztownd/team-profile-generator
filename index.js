@@ -148,7 +148,6 @@ function writeHTML() {
         return
     }
     else {
-        console.log(generateHtml(employees))
         fs.writeFile("./dist/myTeam.html", `${generateHtml(employees)}`, (err) => {
             err ? console.log(err) : console.log('Successfully created Team Profile page!')
         });
