@@ -2,7 +2,6 @@
 
 function generateCards(employees){
   const htmlTemps =[];
-
   
 
  employees.forEach(data => {
