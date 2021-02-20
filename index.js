@@ -40,6 +40,7 @@ function buildManager(){
         const manager = new Manager(answers.name, answers.id, answers.email, answers.office)
         employees.push(manager)
         //create our team
+        console.log("Now let's add some team members!")
         buildTeam();
     })
 }
@@ -57,7 +58,7 @@ function buildTeam() {
             {
                 type: "list",
                 message: "What type of employee would you like to add?",
-                choices: ["Engineer", "Intern", "I dont want to create any more mebers"],
+                choices: ["Engineer", "Intern", "I dont want to create any more members"],
                 name: "type"
             }
 
@@ -104,6 +105,7 @@ function buildTeam() {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
             employees.push(engineer)
             //create our team
+            console.log("Let's add some more team members!");
             buildTeam();
         })
     };
@@ -134,6 +136,7 @@ function buildTeam() {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
             employees.push(intern)
             //create our team
+            console.log("Let's add another team member!")
             buildTeam();
         })
     }

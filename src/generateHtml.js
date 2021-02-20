@@ -35,7 +35,7 @@ function generateCards(employees){
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-dark">ID: ${data.name}</li>
                   <li class="list-group-item text-dark">Email: ${data.email}</li>
-                  <li class="list-group-item text-dark">GitHub: <a href = "https://www.github.com/${data.github}>${data.github}</a></li>
+                  <li class="list-group-item text-dark">GitHub: <a href = "https://www.github.com/${data.github}">${data.github}</a></li>
                 </ul>
               </div>
           </div>
