@@ -9,15 +9,16 @@ function generateCards(employees){
       // console.log(data.getRole())
         if (data.getRole() === "Manager"){
             htmlTemps.push( `
-            <div class="card text-white m-3 float-left shadow " style="width: 18rem;">
-            <div class="card-header bg-primary h5">${data.name}\n
+            <div class="card text-white m-3 float-left shadow " style="width: 18rem; min-height: 300px">
+            <div class="card-header bg-primary h5">${data.name}
+            <br>
                 <i class="fas fa-mug-hot"></i>            
                 Manager
             </div>
             <div class="card mx-auto my-4" style="width: 14rem;">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-dark">ID: ${data.id}</li>
-                  <li class="list-group-item text-dark">Email: ${data.email}</li>
+                  <li class="list-group-item text-dark">Email: <a href="mailto:${data.email}">${data.email}</a></li>
                   <li class="list-group-item text-dark">Office: ${data.officeNumber}</li>
                 </ul>
               </div>
@@ -26,16 +27,17 @@ function generateCards(employees){
         }
         else if (data.getRole() === "Engineer"){
             htmlTemps.push( `
-            <div class="card text-white m-3 float-left shadow" style="width: 18rem;">
-            <div class="card-header bg-primary h5">${data.name}\n
+            <div class="card text-white m-3 float-left shadow" style="width: 18rem; min-height: 300px">
+            <div class="card-header bg-primary h5">${data.name}
+            <br>
                 <i class="fas fa-glasses"></i>
                 Engineer
             </div>
             <div class="card mx-auto my-4" style="width: 14rem;">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-dark">ID: ${data.name}</li>
-                  <li class="list-group-item text-dark">Email: ${data.email}</li>
-                  <li class="list-group-item text-dark">GitHub: <a href = "https://www.github.com/${data.github}">${data.github}</a></li>
+                  <li class="list-group-item text-dark">ID: ${data.id}</li>
+                  <li class="list-group-item text-dark">Email: <a href="mailto:${data.email}">${data.email}</a></li>
+                  <li class="list-group-item text-dark">GitHub: <a href = "https://www.github.com/${data.github}" target="_blank">${data.github}</a></li>
                 </ul>
               </div>
           </div>
@@ -44,15 +46,16 @@ function generateCards(employees){
         }
         else {
             htmlTemps.push( `
-            <div class="card text-white m-3 float-left shadow" style="width: 18rem;">
-            <div class="card-header bg-primary h5">${data.name}\n
+            <div class="card text-white m-3 float-left shadow" style="width: 18rem; min-height: 300px">
+            <div class="card-header bg-primary h5">${data.name}
+            <br>
                 <i class="fas fa-user-graduate"></i>
                 Intern
             </div>
             <div class="card mx-auto my-4" style="width: 14rem;">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item text-dark">ID: ${data.id}</li>
-                  <li class="list-group-item text-dark">Email: ${data.email}</li>
+                  <li class="list-group-item text-dark">Email: <a href="mailto:${data.email}">${data.email}</a></li>
                   <li class="list-group-item text-dark">School: ${data.school}</li>
                 </ul>
               </div>
